@@ -1,6 +1,7 @@
 .form-control:focus {
   outline: none !important;
   border-color: transparent !important;
+  border: none;
 }
 .bi-send::before {
   transform: rotate(45deg);
@@ -15,7 +16,7 @@
   border: 1px solid gray;
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: 2px 2px 4px rgb(186, 186, 186);
+  box-shadow: 0px 0px 4px rgb(186, 186, 186);
   background-color: #aaa439;
 }
 
@@ -78,7 +79,7 @@
   position: fixed;
   right: 15px;
   bottom: 15px;
-  box-shadow: 2px 2px 4px rgb(186, 186, 186);
+  box-shadow: 1px 1px 4px rgb(186, 186, 186);
   z-index: -1;
 }
 
