@@ -12,11 +12,17 @@ export class Bot extends Component {
     };
 
     // questions et réponses
-    this.questions = ["hello", "how are you", "what is your name"];
+    this.questions = [
+      "Hello",
+      "How are you",
+      "What is your name",
+      "I am fine too",
+    ];
     this.reponses = [
       "hi !",
       "i am fine what about you",
       "i am a chat boot name sara",
+      "Great what can I do for you ? ",
     ];
   }
 
@@ -31,12 +37,17 @@ export class Bot extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
+
     let { input, chat: newChat, allChat } = this.state;
+
+    if (input.trim() === "") {
+      return;
+    }
     newChat.message = input;
 
     for (let i = 0; i < this.questions.length; i++) {
       const q = this.questions[i];
-      if (q.match(input)) {
+      if (q.toLowerCase().match(input.toLowerCase())) {
         newChat.reponse = this.reponses[i];
         break;
       } else {
