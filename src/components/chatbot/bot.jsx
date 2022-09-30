@@ -40,6 +40,7 @@ export class Bot extends Component {
 
     let { input, chat: newChat, allChat } = this.state;
 
+    // sort de la fonction si l'utilisateur n'a rien saisi dans l'input
     if (input.trim() === "") {
       return;
     }
